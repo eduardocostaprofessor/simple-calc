@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'ShadowsIntoLight';
+    src: url(../fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #B39DDB, #9575CD) ;
+    background-repeat: no-repeat;
+    font-family: 'ShadowsIntoLight';
+}
+
+/* papel de container */
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* formulário */
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+    max-width: 500px;
+    /* height: 65%; */
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 8px;
+}
+.calc__title {
+    margin-bottom: 20px;
+    color: #673AB7;
+}
+
+.calc__field {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'ShadowsIntoLight';
+
+    border: 2px solid #673AB7;
+    border-radius: 5px;
+    transition: background-color .4s;
+}
+
+.calc__select {
+    padding: 0 10px;
+}
+
+.calc__button {
+    width: 80%;
+    height: 35px;
+    
+    color: white;
+    background-color: #9575CD;
+    border: 1px solid #9575CD;
+    border-radius: 5px;
+}
+
+.calc__result {
+    width: 80%;
+    height: 35px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.calc__field:focus {
+    background-color: #B39DDB;
+    color: white;
+    outline-color: #512DA8;
+}
+.calc__field:focus::placeholder {
+    color: #512DA8
+}
+@media screen and (min-width: 1200px) {
+    .page {
+        max-width: 1200px;
+        margin: 0 auto;
+    }   
+}
